@@ -1,0 +1,14 @@
+.mainLayout{
+    margin-left:330px;
+    background-color:white;
+    margin-top:15px;
+    padding:20px;
+}
+.bgr{
+    background-image: url('/img/background.jpg');
+}
+
+.title{
+    color: forestgreen;
+    font-weight: bold;
+}
