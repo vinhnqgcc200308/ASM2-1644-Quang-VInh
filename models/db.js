@@ -11,3 +11,4 @@ mongoose.connect(url,{useNewUrlParser:true},(err) => {
 })
 
 require('./toy.model');
+require('./staff.model');

@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const expressHandlebars = require('express-handlebars');
 const toyController = require('./controller/toyController');
+const staffController = require('./controller/staffController');
 
 var app = express();
 
@@ -26,7 +27,7 @@ app.engine('hbs', expressHandlebars({
 }))
 
 app.get('/', function (req, res) {
-    res.send('Hello world')
+    res.render("home");
 })
 app.set('view engine', 'hbs');
 
@@ -36,3 +37,4 @@ app.listen(port, () => {
 })
 
 app.use('/toy', toyController);
+app.use('/staff', staffController);

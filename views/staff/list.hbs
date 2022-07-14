@@ -1,0 +1,44 @@
+<h3 class = "title">
+    <a href="/toy" class="btn btn-danger">
+        <i class="fa fa-plus"> </i> Create New
+    </a>
+    Staff Information List
+</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class = "title">Name</th>
+            <th class = "title">Age</th>
+            <th class = "title">Gender</th>
+            <th class = "title">Department</th>
+            <th class = "title">Country</th>
+            <th class = "title">Email</th>
+            <th class = "title">Phone</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.age}}</td>
+            <td>{{this.gender}}</td>
+            <td>{{this.department}}</td>
+            <td>{{this.country}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.phone}}</td>
+            <td>
+                <a href="/staff/{{this._id}}">
+                    <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="/staff/delete/{{this._id}}"
+                    onclick="return confirm('Are you sure to delete this record?');">
+                    <i class="fa fa-trash fa-lg" aria-hidden="true">
+
+                    </i>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
