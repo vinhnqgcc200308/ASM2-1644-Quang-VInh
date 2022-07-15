@@ -3,6 +3,8 @@
     background-color:white;
     margin-top:15px;
     padding:20px;
+    width: 88%;
+    max-width: 100%;
 }
 .bgr{
     background-image: url('/img/background.jpg');
